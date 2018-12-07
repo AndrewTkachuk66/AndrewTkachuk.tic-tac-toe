@@ -2,9 +2,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 class GameField {
-    public int i, j;
+    private int i, j;
     private int[][] array;
-    public boolean win;
+    private boolean win;
 
     public int[][] getArray() {
         return array;
@@ -35,9 +35,7 @@ class GameField {
     }
 
     // user go
-    public void putO(int i, int j) {
-        array[i][j] = 1;
-    }
+    public void putO(int i, int j) { array[i][j] = 1; }
 
     // boot go
     public void putX(int i, int j) { array[i][j] = 2; }
@@ -65,38 +63,39 @@ class GameField {
     public boolean whoWin() {
         //user win
         if (array[0][0] == 1 && array[0][1] == 1 && array[0][2] == 1) {
-            System.out.println("User win");
+            System.out.println("You win");
             win = true;
         }
         if (array[0][0] == 1 && array[1][0] == 1 && array[2][0] == 1) {
-            System.out.println("User win");
+            System.out.println("You win");
             win = true;
         }
         if (array[1][0] == 1 && array[1][1] == 1 && array[1][2] == 1) {
-            System.out.println("User win");
+            System.out.println("You win");
             win = true;
         }
         if (array[2][0] == 1 && array[2][1] == 1 && array[2][2] == 1) {
-            System.out.println("User win");
+            System.out.println("You win");
             win = true;
         }
         if (array[0][1] == 1 && array[1][1] == 1 && array[2][1] == 1) {
-            System.out.println("User win");
+            System.out.println("You win");
             win = true;
         }
         if (array[0][2] == 1 && array[1][2] == 1 && array[2][2] == 1) {
-            System.out.println("User win");
+            System.out.println("You win");
             win = true;
         }
         if (array[0][0] == 1 && array[1][1] == 1 && array[2][2] == 1) {
-            System.out.println("User win");
+            System.out.println("You win");
             win = true;
         }
         if (array[2][0] == 1 && array[1][1] == 1 && array[0][2] == 1) {
-            System.out.println("User win");
+            System.out.println("You win");
             win = true;
         }
-        // boot win
+
+        // bot win
         if (array[0][0] == 2 && array[0][1] == 2 && array[0][2] == 2) {
             System.out.println("Bot win");
             win = true;
